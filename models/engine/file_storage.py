@@ -1,18 +1,28 @@
 #!/usr/bin/python3
-""""""
+"""
+
+"""
 import json
 
+
 class FileStorage():
-    """"""
+    """
+    Initializing FileStorage Class.
+    """
     __file_path = 'file.json'
     __objects = {}
 
     def all(self):
-        """"""
+        """
+        Returns the dictionary '__objects'.
+        """
         return self.__objects
 
     def new(self, obj):
-        """"""
+        """
+        Sets the obj with key <obj class name>.id
+        into '__objects'.
+        """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[key] = obj
 
@@ -21,15 +31,12 @@ class FileStorage():
         Serialize process
         """
         with open(self.__file_path, "w", encoding="utf-8") as f:
-            json.dump({key: value.to_dict() for key, value in 
-            self.__objects.items()}, f)
+            json.dump({key: value.to_dict() for key, value in
+                       self.__objects.items()}, f)
 
     def reload(self):
         """
-        Deserializes(convert a string to an object) the JSON file:
-        '__file_path' to a dictionary: '__objects', in case the JSON
-        file doesn't exist, it does nothing.
-        - When data is RECEIVED it's deserialized.
+        Deserializes process.
         """
         from models.base_model import BaseModel
         from models.user import User

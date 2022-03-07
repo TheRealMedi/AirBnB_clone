@@ -4,7 +4,8 @@ inherits from Base Model.
 """
 from models.base_model import BaseModel
 
-class User(BaseModel):
+
+class Place(BaseModel):
     """
     Place info holding.
     """
