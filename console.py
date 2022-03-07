@@ -54,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             args = line.split(' ')
 
             if args[0] not in self.allowed_modules:
-                print("* class doesn't exist **")
+                print("** class doesn't exist **")
             else:
                 if args[0] == self.allowed_modules[0]:
                     instance = BaseModel()
