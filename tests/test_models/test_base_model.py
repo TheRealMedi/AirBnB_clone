@@ -8,7 +8,7 @@ import unittest
 import inspect
 import time
 from datetime import datetime
-import pep8
+import pep8 as pcs
 from unittest import mock
 import models
 base_doc = models.__doc__

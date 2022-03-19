@@ -16,12 +16,12 @@ import models
 
 class TestReview(unittest.TestCase):
     """
-        unitesst for Review class
+    unitesst for Review class
     """
 
     def issub_class(self):
         """
-            test if Review class is sub class of base model
+        test if Review class is sub class of base model
         """
         review = Review()
         self.assertIsInstance(review, BaseModel)
@@ -31,7 +31,7 @@ class TestReview(unittest.TestCase):
 
     def test_place_id_attr(self):
         """
-            test for class attribute
+        test for class attribute
         """
         review = Review()
         self.assertTrue(hasattr(review, "place_id"))
@@ -39,7 +39,7 @@ class TestReview(unittest.TestCase):
 
     def test_user_id_attr(self):
         """
-            test for class attribute
+        test for class attribute
         """
         review = Review()
         self.assertTrue(hasattr(review, "user_id"))
@@ -47,7 +47,7 @@ class TestReview(unittest.TestCase):
 
     def test_text_attr(self):
         """
-            test for class attribute
+        test for class attribute
         """
         review = Review()
         self.assertTrue(hasattr(review, "text"))
@@ -55,8 +55,8 @@ class TestReview(unittest.TestCase):
 
     def test_to_dictReview(self):
         """
-            test to dict method with Review and the type
-            and content
+        test to dict method with Review and the type
+        and content
         """
         review = Review()
         dict_cont = review.to_dict()
@@ -67,7 +67,7 @@ class TestReview(unittest.TestCase):
 
     def test_dict_value(self):
         """
-            test the returned dictionar values
+        test the returned dictionar values
         """
         time_format = "%Y-%m-%dT%H:%M:%S.%f"
         review = Review()
